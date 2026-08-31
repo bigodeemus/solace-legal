@@ -8,7 +8,7 @@ title: Solace Privacy Policy
 # Solace Privacy Policy
 
 Effective date: August 30, 2026  
-Last updated: August 30, 2026
+Last updated: August 31, 2026
 
 Solace is a personal financial-planning and household cash-flow application provided by **Derrek Wilson** ("Solace," "we," "us," or "our"). This policy explains what information Solace handles, where that information is stored, who can access it, and the choices available to users.
 

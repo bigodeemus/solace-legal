@@ -14,4 +14,4 @@ Solace is a personal financial-planning and household cash-flow application for 
 
 For assistance, email [djwilsonspectra@gmail.com](mailto:djwilsonspectra@gmail.com).
 
-Last updated: August 30, 2026
+Last updated: August 31, 2026
