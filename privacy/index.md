@@ -7,8 +7,8 @@ title: Solace Privacy Policy
 
 # Solace Privacy Policy
 
-Effective date: August 30, 2026  
-Last updated: August 31, 2026
+Effective date: September 1, 2026
+Last updated: September 1, 2026
 
 Solace is a personal financial-planning and household cash-flow application provided by **Derrek Wilson** ("Solace," "we," "us," or "our"). This policy explains what information Solace handles, where that information is stored, who can access it, and the choices available to users.
 
@@ -41,6 +41,8 @@ Solace can use Face ID, Touch ID, or the device passcode or password to unlock t
 ## Storage and synchronization
 
 Solace stores a local working copy of app data in the app's sandbox on each device. It also stores structured records in Apple's CloudKit service so the user's devices can synchronize through iCloud.
+
+Solace may register for silent CloudKit change notifications so it can learn that private or shared records changed and refresh them automatically. These background notifications are delivered by Apple, do not display a user-facing alert, and do not route the user's financial-planning records through a developer-operated notification server. Because background delivery is not guaranteed, Solace also checks for changes when the app becomes active and when the user requests synchronization.
 
 Personal profiles are stored in the current user's private CloudKit database. By default, private CloudKit records are accessible only to that user and are not visible to the Solace developer through the CloudKit developer portal. Solace does not use a public CloudKit database for financial-planning records.
 
@@ -94,11 +96,13 @@ Solace provides a **Delete Solace Data** control in People & Funds. After confir
 
 - deletes the current Apple Account's private Solace account record and private profile zones;
 - stops CloudKit shares owned by that user;
-- leaves CloudKit shares owned by other users;
+- leaves other users' shared-profile records intact while ending this user's access to accepted shares;
 - removes the device's local Solace database; and
 - does not cancel or delete the user's App Store purchase history or Solace Pro entitlement, which Apple manages separately.
 
-A shared-profile owner may also stop sharing or delete a shared profile, and a participant may leave a shared profile. If a cloud deletion cannot be completed, Solace must report the failure rather than represent the data as deleted.
+Each profile card also provides a profile-scoped deletion control. Deleting a personal profile does not delete shared profiles. When a shared-profile owner deletes a shared profile, its CloudKit zone, financial records, and invitation are permanently removed for every participant. When an invited participant chooses deletion for a shared profile, that participant leaves the share and loses access; the owner's records remain, the owner becomes the sole active user, and the owner can invite someone else.
+
+For an owned profile, Solace first removes the profile from the Apple Account's CloudKit index so linked devices no longer discover it, then deletes its record zone. If final zone cleanup is temporarily interrupted, Solace reports cleanup as pending and retains only the minimal request required to retry it. Solace does not restore the deleted profile while cleanup is pending.
 
 ## Security
 
